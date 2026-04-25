@@ -60,3 +60,25 @@
     11:20 a. m. - 
 
     - Se registran los tiempos de descarga del robot luuego del primer uso continuo desde la primera carga completa:
+
+
+
+### Archivos necesarios para pruebas básicas
+Para las primeras pruebas, haciendo uso de comunicación serial y envío de rutinas predefinidas, se deben utilizar los siguientes archivos de python, incluidos en el repositorio oficial de OpenCat:
+
+#### Archivos necesarios
+----
+```
+C:...\OpenCat-Quadruped-Robot-main\OpenCat-Quadruped-Robot-main\serialMaster> 
+
+ardSerial.py
+config.py
+SerialCommunication.py
+testSkills.py
+```
+
+```
+C:...\OpenCat-Quadruped-Robot-main\OpenCat-Quadruped-Robot-main\pyUI> 
+
+translate.py
+```
