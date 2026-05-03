@@ -57,7 +57,7 @@
 - Tiempos de carga y descarga
     --
     - Se registran los tiempos de carga del robot luego del primer uso continuo:
-    11:20 a. m. - 
+    9:30 a. m. - 
 
     - Se registran los tiempos de descarga del robot luuego del primer uso continuo desde la primera carga completa:
 

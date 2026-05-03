@@ -128,7 +128,7 @@ def serialWriteNumToByte(port, token, var=None):  # Only to be used for c m u b 
                         # print(message[l*2],end=",")
                         # print(message[l*2+1],end=",")
                         logger.debug(f"{message[l*2]},{message[l*2+1]}")
-            if token == 'W' or token == 'C':
+            if token == 'W' or token == 'C': # digital or analog write, which can have values larger than 127, so use unsigned char
                 in_str = struct.pack('B' * len(message), *message)    # B - unsigned char, e.g. 'B'*3 means 'BBB'
             else:
                 in_str = struct.pack('b' * len(message), *message)    # b - signed char, e.g. 'b'*3 means 'bbb'
@@ -596,12 +596,15 @@ def schedulerToSkill(ports, testSchedule):
     for task in testSchedule:  # execute the tasks in the testSchedule
         print(task)
         token = task[0][0]
+
+        # For 'k' command, get the corresponding posture from the posture table and add it to the skill data
         if token == 'k' and task[0][1:] in currentPostureTable:
             currentRow = currentPostureTable[task[0][1:]][-numJoints:]
             skillRow = copy.deepcopy(currentRow)
             compactSkillData.append(skillRow + [8, int(task[1] * 1000 / 500), 0, 0])
             newSkill = newSkill + skillRow + [8, int(task[1] * 1000 / 500), 0, 0]
 
+        # For 'i' command, update the current posture based on the provided joint indices and angles, then add it to the skill data
         elif token == 'i' or token == 'I':
             currentRow = copy.deepcopy(skillRow)
             for e in range(0, len(task[1]), 2):
@@ -610,11 +613,14 @@ def schedulerToSkill(ports, testSchedule):
             skillRow = copy.deepcopy(currentRow)
             compactSkillData.append(skillRow + [8, int(task[2] * 1000 / 500), 0, 0])
             newSkill = newSkill + skillRow + [8, int(task[2] * 1000 / 500), 0, 0]
+
+        # For 'L' command, similar to 'k' but with a different time scaling factor, and it uses the initial posture from the posture table without updates from 'i' commands
         elif token == 'L':
             skillRow = copy.deepcopy(task[1][:numJoints])
             compactSkillData.append(skillRow + [8, int(task[2] * 1000 / 500), 0, 0])
             newSkill = newSkill + skillRow + [8, int(task[2] * 1000 / 500), 0, 0]
 
+        # For 'm' command, update the current posture based on the provided joint indices and angles, then add it to the skill data
         elif token == 'm':
             currentRow = copy.deepcopy(skillRow)
             for e in range(0, len(task[1]), 2):
@@ -622,6 +628,7 @@ def schedulerToSkill(ports, testSchedule):
                 skillRow = copy.deepcopy(currentRow)
                 compactSkillData.append(skillRow + [8, int(task[2] * 1000 / 500), 0, 0])
                 newSkill = newSkill + skillRow + [8, int(task[2] * 1000 / 500), 0, 0]
+
     if len(compactSkillData) > 0:
         print('{')
         print('{:>4},{:>4},{:>4},{:>4},'.format(*[-len(compactSkillData), 0, 0, 1]))
@@ -629,6 +636,7 @@ def schedulerToSkill(ports, testSchedule):
     else:
         return
     angleRatio = 1
+    
     for row in compactSkillData:
         if min(row) < -125 or max(row) > 125:
             angleRatio = 2
