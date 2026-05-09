@@ -45,6 +45,16 @@ if __name__ == '__main__':
             #send(goodPorts, ['m', [1, cmd], 0.1])
             #send(goodPorts, ['m', [12, cmd], 1])
             
+            # 0 - 7 for leg joints, 8 for tail, 9 for right ear, 10 for left ear, 11 for waist, 12 for neck
+            # 0 cabeza
+            # 8 pierna izquierda delantera
+            # 9 pierna derecha delantera
+            # 10 pierna derecha trasera
+            # 11 pierna izquierda trasera
+            # 12 pata izquierda delantera
+            # 13 pata derecha delantera
+            # 14 pata derecha trasera
+            # 15 pata izquierda trasera
 
 
             # # verificar si es texto o numero
