@@ -26,10 +26,10 @@ if __name__ == '__main__':
         t.start()
         parallel = False
 
-        #send(goodPorts, ['kbalance',2]) 
-        #send(goodPorts, ['krest',5])
-        #send(goodPorts, ['ksit',3]) 
-        #send(goodPorts, ['khi',1]) 
+        # send(goodPorts, ['kbalance',2]) 
+        # send(goodPorts, ['krest',5])
+        # send(goodPorts, ['ksit',3]) 
+        # send(goodPorts, ['khi',1]) 
 
         #send(goodPorts,['m', [0, 45, 0, -45, 0, 45, 0, -45], 2])
         #send(goodPorts,['m', [0, 45, 0, -45, 0, 45, 0, -45], 5])
