@@ -1,7 +1,6 @@
-2026-05-29 15:03:33,392 ardSerial - INFO - ardSerial date: Feb. 27, 2025
-2026-05-29 15:03:33,414 ardSerial - INFO - *** Available serial ports: ***
-2026-05-29 15:03:33,414 ardSerial - INFO - COM4 
-2026-05-29 15:03:39,157 ardSerial - INFO - Connect to serial port list:
-2026-05-29 15:03:39,157 ardSerial - INFO - COM4
-2026-05-29 15:03:46,885 ardSerial - INFO - close the serial port.
-2026-05-29 15:03:46,886 ardSerial - INFO - finish!
+2026-10-24 01:23:46,170 ardSerial - INFO - ardSerial date: Feb. 27, 2025
+2026-10-24 01:23:46,189 ardSerial - INFO - *** Available serial ports: ***
+2026-10-24 01:23:46,190 ardSerial - INFO - COM3 
+2026-10-24 01:23:51,925 ardSerial - INFO - Connect to serial port list:
+2026-10-24 01:23:51,926 ardSerial - INFO - COM3
+2026-10-24 01:27:19,315 ardSerial - INFO - Removing COM3

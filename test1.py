@@ -15,6 +15,32 @@ E_EFFECT_FLASH = 2
 E_EFFECT_NONE = 3
 
 
+vt = [
+21, 0, 0, 1,
+  57,  43,  60,  47, -18,   7, -17,   7,
+  50,  43,  53,  47,  -5,   7,  -5,   7,
+  43,  43,  47,  47,   7,   7,   7,   7,
+  43,  43,  47,  47,   7,   7,   7,   7,
+  43,  43,  47,  47,   7,   7,   7,   7,
+  43,  47,  47,  50,   7,   0,   7,   0,
+  43,  54,  47,  58,   7, -13,   7, -13,
+  43,  60,  47,  65,   7, -25,   7, -25,
+  43,  66,  47,  71,   7, -35,   7, -35,
+  43,  63,  47,  67,   7, -30,   7, -29,
+  43,  57,  47,  60,   7, -18,   7, -17,
+  43,  50,  47,  53,   7,  -5,   7,  -5,
+  43,  43,  47,  47,   7,   7,   7,   7,
+  43,  43,  47,  47,   7,   7,   7,   7,
+  43,  43,  47,  47,   7,   7,   7,   7,
+  43,  43,  47,  47,   7,   7,   7,   7,
+  47,  43,  50,  47,   0,   7,   0,   7,
+  54,  43,  58,  47, -13,   7, -13,   7,
+  60,  43,  65,  47, -25,   7, -25,   7,
+  66,  43,  71,  47, -35,   7, -35,   7,
+  63,  43,  67,  47, -30,   7, -29,   7,
+]
+
+
 if __name__ == '__main__':
     try:
         '''
@@ -26,7 +52,7 @@ if __name__ == '__main__':
         t.start()
         parallel = False
 
-        # send(goodPorts, ['kbalance',2]) 
+        # send(goodPorts, ['kphF',2]) 
         # send(goodPorts, ['krest',5])
         # send(goodPorts, ['ksit',3]) 
         # send(goodPorts, ['khi',1]) 
@@ -67,13 +93,19 @@ if __name__ == '__main__':
         #send(goodPorts, ['ksit',3]) 
 
 
-        for cmd in range(-45, 45, 1):
-            send(goodPorts, ['L', [cmd, 0, 0, 0, 0, 0, 0, 0, 30, 30, cmd, cmd, 45, 45, 45 if cmd <= 0 else -20+cmd, 45 if cmd <= 0 else -20+cmd], 0.005])
+        #for cmd in range(-45, 45, 1):
+            #send(goodPorts, ['L', [cmd, 0, 0, 0, 0, 0, 0, 0, 30, 30, cmd, cmd, 45, 45, 45 if cmd <= 0 else -20+cmd, 45 if cmd <= 0 else -20+cmd], 0.005])
             #send(goodPorts, ['i', [0, cmd, 8, cmd, 9, cmd], 0.1])
             #['I', [8, 50, 9, 50, 10, 50, 11, 50, 0, 0], 3]
 
+        send(goodPorts, ['K', vt, 1])
+
+
+        # Enviar comandos de movimiento a través del puerto serie
+        #while True:
+         #   cmd = input("Enter command: ")
+          #  send(goodPorts, ['k' + cmd, 2])
             
-                
 
     
 
