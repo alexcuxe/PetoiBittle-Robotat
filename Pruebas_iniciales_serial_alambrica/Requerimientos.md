@@ -47,7 +47,7 @@
 - Indicadores
     --
     - Luz roja: Batería baja.
-    - Luz azul: Batería con carga.
+    - Luz azul: Batería totalmente cargada o encendida.
     
     ![BTplaca](Imagenes/Battery.png)
 
@@ -56,15 +56,14 @@
 
 - Tiempos de carga y descarga
     --
-    - Se registran los tiempos de carga del robot luego del primer uso continuo:
-    9:30 a. m. - 
+    - Se estima una tiempo de carga de 1:30 hrs para una carga completa, desde el puerto USB de una laptop.
 
-    - Se registran los tiempos de descarga del robot luuego del primer uso continuo desde la primera carga completa:
+    - Se estima un tiempo de descarga de 1:30 hrs con carga completa y uso moderado.
 
 
 
 ### Archivos necesarios para pruebas básicas
-Para las primeras pruebas, haciendo uso de comunicación serial y envío de rutinas predefinidas, se deben utilizar los siguientes archivos de python, incluidos en el repositorio oficial de OpenCat:
+Para las primeras pruebas, haciendo uso de comunicación serial y envío de rutinas predefinidas, se deben utilizar los siguientes archivos de python, incluidos en el repositorio oficial de OpenCat y extraídos del mismo:
 
 #### Archivos necesarios
 ----
@@ -81,4 +80,12 @@ testSkills.py
 C:...\OpenCat-Quadruped-Robot-main\OpenCat-Quadruped-Robot-main\pyUI> 
 
 translate.py
+```
+
+En este respositorio, se incluye un archivo para pruebas en el que se dejan comentadas las líneas utilizadas para este cometido. En este archivo se concentra el uso de los documentos antes mencionados.
+
+```
+C:...\OpenCat-Quadruped-Robot-main\OpenCat-Quadruped-Robot-main\pyUI> 
+
+test1.py
 ```
