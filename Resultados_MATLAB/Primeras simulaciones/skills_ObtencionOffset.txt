@@ -1,0 +1,149 @@
+skillFullName = {
+        'balance': 'balance',
+        'buttUp': 'buttUp',
+        'dropped': 'dropped',
+        'lifted': 'lifted',
+        'lnd': 'landing',
+        'rest': 'rest',
+        'sit': 'sit',
+        'up': 'up',
+        'str': 'stretch',
+        'calib': 'calib',
+        'zero': 'zero',
+        'ang':'angry',
+         'bf': 'backFlip',
+         'bx': 'boxing',
+         'ck': 'check',
+         'cmh': 'comeHere',
+         'dg': 'dig',
+         'ff': 'frontFlip',
+         'fiv': 'highFive',
+         'gdb': 'goodboy',
+         'hds': 'handStand',
+         'hi': 'hi',
+         'hg': 'hug',
+         'hsk': 'handShake',
+         'hu': 'handsUp',
+         'jmp': 'jump',
+         'chr': 'cheers',
+         'kc': 'kick',
+         'mw': 'moonWalk',
+         'nd': 'nod',
+         'pd': 'playDead',
+         'pee': 'pee',
+         'pu': 'pushUp',
+         'pu1': 'pushUpSingleArm',
+         'rc': 'recover',
+         'rl': 'roll',
+         'scrh': 'scratch',
+         'snf': 'sniff',
+         'tbl': 'table',
+         'ts': 'testServo',
+         'wh': 'waveHead',
+         'zz': 'zz',
+         }
+
+
+
+
+
+#ifndef ACTIONS_H_
+#define ACTIONS_H_
+// action string json
+const String dict_json = "{"
+"\"gyro\": \"g\","
+"\"calibration\": \"c\","
+"\"balance\": \"kbalance\","
+"\"walk\": \"kwkF\","
+"\"trot\": \"ktrF\","
+"\"crawl\": \"kcrF\","
+"\"sit\": \"ksit\","
+"\"check\": \"kck\","
+"\"buttup\": \"kbuttUp\","
+"\"hello\": \"khi\","
+"\"stretch\": \"kstr\","
+"\"run\": \"krnF\","
+"\"pee\": \"kpee\","
+"\"pushup\": \"kpu\","
+"\"stepping\": \"kvtF\","
+"\"lookup\": \"lu\","
+"\"forward\": \"kwkF\","
+"\"forwardleft\": \"kwkL\","
+"\"forwardright\": \"kwkR\","
+"\"backleft\": \"kbkL\","
+"\"backright\": \"kbkR\","
+"\"back\": \"kbk\","
+"\"stop\": \"d\""
+"}";
+
+
+#endif // ACTIONS_H_
+
+
+
+
+
+
+
+
+
+>> robotat_trvisualize(robotat, 63)
+>> xi = robotat_get_pose(robotat, 63, 'eulzyx')
+
+xi =
+
+   -0.3290   -0.8057    0.1056   86.6559   -1.5138    1.8104
+
+>> offset = atan2d(sind(xi(4)), cosd(xi(4)))
+
+offset =
+
+   86.6559
+
+>> theta = atan2d(sind(xi(4) - offset), cosd(xi(4) - offset))
+
+theta =
+
+     0
+
+>> theta = atan2d(sind(xi(4) - offset), cosd(xi(4) - offset))
+
+theta =
+
+     0
+
+>> theta = atan2d(sind(xi(4) - offset), cosd(xi(4) - offset))
+
+theta =
+
+     0
+
+>> theta = atan2d(sind(xi(4) - offset), cosd(xi(4) - offset))
+
+theta =
+
+     0
+
+>> theta = atan2d(sind(xi(4) - offset), cosd(xi(4) - offset))
+
+theta =
+
+     0
+
+>> xi = robotat_get_pose(robotat, 63, 'eulzyx')
+
+xi =
+
+    0.2456   -1.2413    0.1106  116.1471   -1.1651    1.8008
+
+>> theta = atan2d(sind(xi(4) - offset), cosd(xi(4) - offset))
+
+theta =
+
+   29.4912
+
+>> offset
+
+offset =
+
+   86.6559
