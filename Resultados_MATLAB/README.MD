@@ -2,7 +2,7 @@
 
 Esta carpeta contiene los resultados finales entregados al final del proyecto. Cosnta de 3 carpetas principales:
 
-1. **bittle_x:** Archivos extraídos de la carpeta .zip descargada de Onshape, resultado de la edición de un archivo público y utilizados en el archivo `BittleApp.m` para la visualización del modelo tridimensional en la aplicación desarrollada. No se han editado archivos dentro de esta carpeta, son archivos en bruto fruto de la descompresión de la descarga directa online, solo contiene archivos temporales creados por MATLAB y reemplazados cada vez se corre el programa (no relevantes: `bittle_cinematico.urdf` y `robot_cinematico_temp.urdf`), el resto de archivos sí son utilizados por la App.
+1. **bittle_x:** Archivos extraídos de la carpeta .zip descargada de Onshape, resultado de la edición de un archivo público y utilizados en los archivos `BittleApp.m` y `control_bittle.m` para la visualización del modelo tridimensional en la aplicación desarrollada. No se han editado archivos dentro de esta carpeta, son archivos en bruto fruto de la descompresión de la descarga directa online, solo contiene archivos temporales creados por MATLAB y reemplazados cada vez se corre el programa (no relevantes: `bittle_cinematico.urdf` y `robot_cinematico_temp.urdf`), el resto de archivos sí son utilizados por la App.
 
 2. **Primeras simulaciones:** Contiene archivos previos utilizados durante las primeras fases del proyecto, no son parte del del entregable final, pero pueden servir de base para trabajos futuros. Cotiene archivos utilizando la primer simulación desarrollada mediante parámetros de Denavit-Harteberg.
 

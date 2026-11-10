@@ -8,8 +8,8 @@ En esta carpeta se encuentran los archivos previos al entregable final. Son arch
 ## Archivos
 
 1. **bittleSimulationHeaded.m:** Este código de MATLAB contiene el archivo desarrollado inicialmente con la cinemática directa, mediante parámetros de Denavit-Hartenber, con el propósito de construir la primera simulación para poder validar el empaquetado, envío y recepción de comandos.
-2. **control_bittle.m:** Este archivo procede del trabajo con el código `bittleSimulationHeaded.m`. Este archivo corresponde a la misma simulaciónd de su predecesor, con la diferencia que integra el envío de comandos inalámbricos mediante el puente TCP.
-3. **ui.m:** Este código presenta la primera iteración de la aplicación final entregada en el proyecto (`BittleApp.m`). Contempla el uso de la simulación inicial desarrollada mediante parámetros DH.
+2. **ui.m:** Este archivo procede del trabajo con el código `bittleSimulationHeaded.m`. Este archivo corresponde a la misma simulación de su predecesor, con la diferencia que integra el envío de comandos inalámbricos mediante el puente TCP. Este código presenta la primera iteración de la aplicación final entregada en el proyecto (`BittleApp.m`). Contempla el uso de la simulación inicial desarrollada mediante parámetros DH.
+3. **control_bittle.m:** Este código es el archivo predecesor de la aplicación desarrollada como entregable del proyecto (`BittleApp.m`). Este programa contempla el uso de los mismo archivos que utiliza el archivo `BittleApp.m`, ya que presentan la simulación en sus fases tempranas, acompañado únicamente de sliders para verificar la visualización de la simulación.
 4. **skills_ObtencionOffset:** Contiene un set preliminar de las rutinas predeterminadas del robot, contenidas en su firmware. Al final del archivo se adjunta el proceso para la obtención del offset del robot, con el objetivo de poder replicar esto en los futuros agentes. Los comandos utilizados (con previa conexión al Robotat, se usa el marker #63 como) son los siguientes:
 
     - Se recomienda la visualización del marker y verificar funcionalidad.
