@@ -6,7 +6,7 @@ Esta carpeta contiene los resultados finales entregados al final del proyecto. C
 
 2. **Primeras simulaciones:** Contiene archivos previos utilizados durante las primeras fases del proyecto, no son parte del del entregable final, pero pueden servir de base para trabajos futuros. Cotiene archivos utilizando la primer simulación desarrollada mediante parámetros de Denavit-Harteberg.
 
-3. **WiFi_MAC_TCP:** Contiene el archivo `WiFi_MAC_TCP.ino` desarrollado para habilitar la comunicación inalámbrica en el módulo ESP-WROOM-02D. Archivo único desarrollado para este cometido, contiene comentarios previstos para comprensión y sujeto a futuros cambios. 
+3. **WiFi_MAC_TCP:** Contiene el archivo `WiFi_MAC_TCP.ino` desarrollado para habilitar la comunicación inalámbrica en el módulo ESP-WROOM-02D. Archivo único desarrollado para este cometido, contiene comentarios previstos para comprensión y sujeto a futuros cambios. Archivo único para Arduino IDE. Para lograr la conexión con el módulo seguir las instrucciones para la [adecuación del entorno de desarrollo](https://guide.petoi.com/communication-modules/wifi-esp8266) sugeridas por Petoi.
 
 La carpeta también contiene los archivos desarrollados para la entrega final del proyecto, para poder correr estos archivos sin problema todos deben ser parte de la misma carpeta y estar acompañados de la carpeta `bittle_x` para poder habilitar la simulación. El archivo central es `BittleApp.m` que hace uso de las funciones desarrolladas. La validación del proyecto se implementó mediante el código independiente a la interfaz desarrollada `robotat_validation.m`, que también hace uso de las funciones desarrolladas.
 
